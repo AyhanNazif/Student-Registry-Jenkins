@@ -36,7 +36,7 @@ suite('Add Students page', function() {
     let body = await res.text();
     let studentsReturned = body.includes(
 		"<ul><li>Steve (steve@gmail.com)</li><li>Tina (tina@yahoo.com)</li><li>Peter (peter@gmail.com)</li></ul>");
-    assert.ok(studentsReturned, "Add student failed");
+    assert.ok(studentsReturned);
   });
 
   test('Add invalid student', async function() {
