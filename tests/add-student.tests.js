@@ -30,7 +30,7 @@ suite('Add Students page', function() {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded"
         },
-        body: "name=Peter&email=peter%40gmail.com"
+        body: "name=Peter&email=peter@40gmail.com"
       }
     );
     let body = await res.text();
