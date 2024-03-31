@@ -30,13 +30,12 @@ suite('Add Students page', function() {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded"
         },
-        body: "name=Peter&email=peter@40gmail.com"
+        body: "name=Peter&email=peter@gmail.com"
       }
     );
     let body = await res.text();
-    let studentsReturned = body.includes(
-		"<ul><li>Steve (steve@gmail.com)</li><li>Tina (tina@yahoo.com)</li><li>Peter (peter@gmail.com)</li></ul>");
-    assert.ok(studentsReturned);
+    assert.ok(body.includes(
+      "<ul><li>Steve (steve@gmail.com)</li><li>Tina (tina@yahoo.com)</li><li>Peter (peter@gmail.com)</li></ul>"));
   });
 
   test('Add invalid student', async function() {
